@@ -25,6 +25,7 @@
 #include "Graphics.h"
 #include "Board.h"
 #include "Cell.h"
+#include "FrameTimer.h"
 #include <vector>
 
 class Game
@@ -46,11 +47,12 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+	FrameTimer ft;
 	Board brd;
 	std::vector<std::vector<Cell>> cells;
 	bool hasStarted = false;
-	static constexpr int nextStatePeriod = 10;
-	int stateCounter = 0;
+	static constexpr float nextStatePeriod = 0.2f;
+	float stateCounter = 0.0f;
 	bool lmPressed = false;
 	/********************************/
 };

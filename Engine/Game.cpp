@@ -52,14 +52,16 @@ void Game::UpdateModel()
 {
 	if (hasStarted)
 	{
+		float dt = ft.Mark();
 		if (wnd.kbd.KeyIsPressed(VK_ESCAPE))
 		{
 			Reset();
 			return;
 		}
-		stateCounter++;
+		stateCounter += dt;
 		if (stateCounter >= nextStatePeriod)
 		{
+			stateCounter -= nextStatePeriod;
 			for (int i = 0; i < cells.size(); i++)
 			{
 				for (int j = 0; j < cells[0].size(); j++)
@@ -82,6 +84,7 @@ void Game::UpdateModel()
 		if (wnd.kbd.KeyIsPressed(VK_RETURN))
 		{
 			hasStarted = true;
+			ft = FrameTimer();
 		} 
 		
 
