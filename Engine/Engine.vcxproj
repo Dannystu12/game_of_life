@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Conway%27s Game of Life\Engine\Board.h" />
     <ClInclude Include="..\..\Conway%27s Game of Life\Engine\Cell.h" />
+    <ClInclude Include="..\..\Conway%27s Game of Life\Engine\FrameTimer.h" />
     <ClInclude Include="..\..\Conway%27s Game of Life\Engine\Location.h" />
     <ClInclude Include="ChiliException.h" />
     <ClInclude Include="ChiliWin.h" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Conway%27s Game of Life\Engine\Board.cpp" />
     <ClCompile Include="..\..\Conway%27s Game of Life\Engine\Cell.cpp" />
+    <ClCompile Include="..\..\Conway%27s Game of Life\Engine\FrameTimer.cpp" />
     <ClCompile Include="DXErr.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphics.cpp" />
