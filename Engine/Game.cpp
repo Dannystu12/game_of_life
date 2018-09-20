@@ -62,16 +62,16 @@ void Game::UpdateModel()
 		if (stateCounter >= nextStatePeriod)
 		{
 			stateCounter -= nextStatePeriod;
-			for (int i = 0; i < cells.size(); i++)
+			for (int i = 0; i < int(cells.size()); i++)
 			{
-				for (int j = 0; j < cells[0].size(); j++)
+				for (int j = 0; j < int(cells[0].size()); j++)
 				{
 					cells[i][j].Update(cells);
 				}
 			}
-			for (int i = 0; i < cells.size(); i++)
+			for (int i = 0; i < int(cells.size()); i++)
 			{
-				for (int j = 0; j < cells[0].size(); j++)
+				for (int j = 0; j < int(cells[0].size()); j++)
 				{
 					cells[i][j].MoveToNextState();
 				}
@@ -108,9 +108,9 @@ void Game::UpdateModel()
 void Game::Reset()
 {
 	hasStarted = false;
-	for (int i = 0; i < cells.size(); i++)
+	for (int i = 0; i < int(cells.size()); i++)
 	{
-		for (int j = 0; j < cells[0].size(); j++)
+		for (int j = 0; j < int(cells[0].size()); j++)
 		{
 			cells[i][j].SetToDead();
 			stateCounter = 0;
@@ -121,9 +121,9 @@ void Game::Reset()
 void Game::ComposeFrame()
 {
 	brd.DrawBoard();
-	for (int i = 0; i < cells.size(); i++)
+	for (int i = 0; i < int(cells.size()); i++)
 	{
-		for (int j = 0; j < cells[0].size(); j++)
+		for (int j = 0; j < int(cells[0].size()); j++)
 		{
 			cells[i][j].Draw(brd);
 		}

@@ -27,7 +27,7 @@ void Cell::MoveToNextState()
 void Cell::Update(const std::vector<std::vector<Cell>>& cells)
 {
 	int neighborsAlive = 0;
-	for (int i = 0; i < neighbors.size(); i++)
+	for (int i = 0; i < int(neighbors.size()); i++)
 	{
 		Location& neighbor = neighbors[i];
 		if (cells[neighbor.y][neighbor.x].IsAlive())
